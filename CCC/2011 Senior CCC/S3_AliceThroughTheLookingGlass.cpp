@@ -4,8 +4,6 @@
 
 using namespace std;
 
-
-
 int alice(int magnif,int x, int y,int stal[4][2])
 {
 	int fBool = 0;
@@ -38,11 +36,6 @@ int alice(int magnif,int x, int y,int stal[4][2])
 	}
 	return fBool;
 }
-
-
-
-
-
 
 int main()
 {
