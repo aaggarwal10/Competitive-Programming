@@ -31,7 +31,7 @@ dfs.append(start)#add it to queue
 remain=[1]*n
 remain[start]=0
 end=start
-while dfs:@while queis not empty
+while dfs:#while queis not empty
     end=dfs.popleft()#pop first item
     for v in g[end]:#for every node it is connected to
         if remain[v]:#if it should remain there
