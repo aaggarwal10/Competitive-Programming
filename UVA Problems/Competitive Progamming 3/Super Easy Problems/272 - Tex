@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string line;
+    string entireIn;
+    while (getline(cin,line)){
+        if (line.empty()){
+            break;
+        }
+        entireIn+=line+"\n";
+    }
+    bool first = true;
+    int curInd = 0;
+    while (curInd < entireIn.size()){
+        if (entireIn.at(curInd)=='"'){
+            if (first){
+                entireIn = entireIn.substr(0,curInd)+"``"+entireIn.substr(curInd+1,entireIn.size()-curInd-1);
+                first = false;
+            }
+            else{
+                entireIn = entireIn.substr(0,curInd)+"''"+entireIn.substr(curInd+1,entireIn.size()-curInd-1);
+                first = true;
+            }
+        }
+        curInd+=1;
+    }
+    cout << entireIn.substr(0,entireIn.size()-1) << endl;
+
+    return 0;
+}
