@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+int testcases;
+int a, b;
+int main()
+{
+    while (true){
+        cin >> testcases;
+        if (!testcases){
+            break;
+        }
+
+        int division_x,division_y;
+        int cur_x,cur_y;
+        cin >> division_x >> division_y;
+        for (int i = 0; i<testcases; i++){
+            cin >> cur_x >> cur_y;
+            if (cur_x==division_x || cur_y == division_y){
+                cout <<"divisa"<<endl;
+            }
+            else if (cur_x>division_x){
+                if (cur_y>division_y){
+                    cout << "NE" << endl;
+                }
+                else{
+                    cout << "SE"<<endl;
+                }
+            }
+            else{
+                if (cur_y>division_y){
+                    cout << "NO" << endl;
+                }
+                else{
+                    cout << "SO"<<endl;
+                }
+            }
+        }
+    }
+    return 0;
+}
